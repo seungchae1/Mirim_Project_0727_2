@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textName, textEmail;
+    EditText textName, textEmail;
     EditText dlgEditName, dlgEditEmail;
     TextView toastText;
     View dlgView, toastView;
@@ -34,15 +34,12 @@ public class MainActivity extends AppCompatActivity {
             dlg.setTitle("사용자정보입력");
             dlgView = View.inflate(MainActivity.this, R.layout.dialog1, null);
             dlg.setView(dlgView);
-            dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dlgEditName = dlgView.findViewById(R.id.edit_name);
-                    dlgEditEmail = dlgView.findViewById(R.id.edit_email);
-                    textName.setText(dlgEditName.getText().toString());
-                    textEmail.setText(dlgEditEmail.getText().toString());
-                }
-            });
+            dlgEditName = dlgView.findViewById(R.id.edit_name);
+            dlgEditEmail = dlgView.findViewById(R.id.edit_email);
+            dlgEditName.setText(textName.getText().toString()); //activity_main.xml의 eidttext 내용을
+            dlgEditEmail.setText(textEmail.getText().toString()); //dialong1.xml의 edittext에 넣음
+
+            dlg.setPositiveButton("확인", null);
             dlg.setNegativeButton("취소", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

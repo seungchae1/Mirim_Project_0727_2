@@ -8,19 +8,19 @@
     android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/text_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="사용자이름"
+        android:hint="사용자이름"
         android:textSize="25sp"
         android:layout_marginTop="25dp"
         android:textColor="#A187FF"/>
-    <TextView
+    <EditText
         android:id="@+id/text_email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="E-mail"
+        android:hint="E-mail"
         android:textSize="25sp"
         android:textColor="#A187FF"/>
     <Button
@@ -28,6 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="사용자정보입력"/>
+        android:text="여기를 클릭"/>
 
 </LinearLayout>
